@@ -7,6 +7,7 @@ import { fetchData } from './api';
 function App() {
 
   const [data, setData] = useState({})
+  const [currentCountry, setCurrentCountry] = useState('')
 
   useEffect( async () => {
     const fetchDataAPI = async () => {
@@ -17,9 +18,13 @@ function App() {
     
   }, [])
 
+  const handleCountryChange = async (country) => {
+    console.log(country)
+  }
+
   return (
     <div className={styles.container}>
-      <Cards data={data}/>
+      <Cards data={data} handleCountryChange={handleCountryChange}/>
       <Chart/>
       <CountryPicker/>
     </div>
