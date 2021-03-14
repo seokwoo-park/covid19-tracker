@@ -17,10 +17,6 @@ function CountryPicker({handleCountryChange}) {
         fetchCountryAPI()
     },[setCountryList])
 
-    console.log(countryList)
-    console.log(handleCountryChange)
-    // countryList.map((a,i)=>{console.log(a)})
-
     return (
         <FormControl className={styles.container}>
             <NativeSelect defaultValue="" onChange={(e)=> handleCountryChange(e.target.value)}>
