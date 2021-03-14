@@ -15,7 +15,6 @@ function Chart({data, currentCountry}) {
 
         fetchAPI();
         
-        console.log(dailyData)
 
 
     },[])

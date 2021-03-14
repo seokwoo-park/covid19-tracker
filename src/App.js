@@ -3,6 +3,8 @@ import { Cards,Chart,CountryPicker } from './components/index';
 import styles from './App.module.css';
 import { fetchData } from './api';
 
+import coronaImage from './images/image.png'
+
 
 function App() {
 
@@ -23,11 +25,11 @@ function App() {
     const fetchedData = await fetchData(country);
     setData(fetchedData);
     setCurrentCountry(country)
-    console.log(fetchedData)
   }
   
   return (
     <div className={styles.container}>
+      <img className={styles.image} src={coronaImage} alt="COVID-19"/>
       <Cards data={data} />
       <Chart data={data} currentCountry={currentCountry}/>
       <CountryPicker handleCountryChange={handleCountryChange}/>

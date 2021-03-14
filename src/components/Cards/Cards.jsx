@@ -31,7 +31,7 @@ function Cards({ data : {confirmed, recovered, deaths, lastUpdate } }) {
                             {new Date(lastUpdate).toDateString()}
                         </Typography>
                         <Typography variant="body2">
-                            Number of active cases
+                            Number of active cases of COVID-19
                         </Typography>
                     </CardContent>
                 </Grid>
@@ -51,7 +51,7 @@ function Cards({ data : {confirmed, recovered, deaths, lastUpdate } }) {
                         <Typography color="textSecondary">
                             {new Date(lastUpdate).toDateString()}
                         </Typography>
-                        <Typography variant="body2">Number of active cases</Typography>
+                        <Typography variant="body2">Number of recoveries from COVID-19</Typography>
                     </CardContent>
                 </Grid>
 
@@ -70,7 +70,7 @@ function Cards({ data : {confirmed, recovered, deaths, lastUpdate } }) {
                         <Typography color="textSecondary">
                             {new Date(lastUpdate).toDateString()}
                         </Typography>
-                        <Typography variant="body2">Number of active cases</Typography>
+                        <Typography variant="body2">Number of deaths caused by COVID-19</Typography>
                     </CardContent>
                 </Grid>
             </Grid>
